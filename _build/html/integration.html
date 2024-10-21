@@ -1,0 +1,709 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Integration &#8212; PHYS 512 Computational Physics with Applications</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'integration';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Solutions to exercises" href="function_solutions.html" />
+    <link rel="prev" title="Interpolation" href="interpolation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/plasma.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/plasma.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Course outline</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Getting set up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming.html">Programming best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="floats.html">Floating point arithmetic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Manipulating functions</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Integration</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="function_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="derivatives_solutions.html">Derivatives exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation_solutions.html">Interpolation exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration_solutions.html">Integration exercises</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Random numbers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="random.html">Random numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcg.html">Linear Congruential Generators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generating_random.html">Probability distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monte_carlo_integration.html">Monte Carlo integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metropolis.html">Metropolis-Hastings algorithm</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="random_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="prob_distributions_solutions.html">Probability distributions Exercise 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prob_distributions_solutions_part2.html">Probability distributions Part 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="montecarlo_solutions.html">Monte Carlo Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metropolis_solutions.html">Metropolis-Hastings</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solving systems of equations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="matrices.html">Matrices in numpy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="linear_least_squares.html">Linear least squares</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polynomial_fit.html">Polynomial fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nonlinear.html">Non-linear least squares</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="solving_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="polynomial_fit_solutions.html">Orthogonal polynomials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear_fit.html">Lorentzian fit</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="mllecture.html">Machine Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="chatgpt.html">ChatGPT ‘Real-Life Example’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mltensorflow.html">Example : Higgs Boson</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hw1.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw2.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw3.html">Homework 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw4.html">Homework 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_instructions.html">Project Instructions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="homework_solutions.html">Homework solutions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="HW1_solutions.html">Homework 1 solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HW2_solutions.html">Homework 2 solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework_notes/hw2_common_issues.html">Homework 2: Common Issues</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2Fintegration.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/integration.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Integration</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-cotes-methods">Newton-Cotes methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-quadrature">Gaussian quadrature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-challenge">Integration challenge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="integration">
+<h1>Integration<a class="headerlink" href="#integration" title="Permalink to this heading">#</a></h1>
+<section id="newton-cotes-methods">
+<h2>Newton-Cotes methods<a class="headerlink" href="#newton-cotes-methods" title="Permalink to this heading">#</a></h2>
+<p>A related problem to interpolation is when we need to calculate the integral of a function</p>
+<div class="math notranslate nohighlight">
+\[I = \int_{x_1}^{x_N} f(x) dx\]</div>
+<p>given values of the function at a discrete set of points <span class="math notranslate nohighlight">\(x_1\dots x_N\)</span>, which we’ll write as <span class="math notranslate nohighlight">\(f_i\equiv f(x_i)\)</span>. For simplicity here we’ll assume that the spacing between points on the grid is constant <span class="math notranslate nohighlight">\(x_{i+1}-x_i = \Delta x\)</span>, but it’s straighforward to generalize to non-uniform sampling if you need to.</p>
+<p>To estimate the value of the integral, we need to model how the function behaves in each interval <span class="math notranslate nohighlight">\(x_i&lt;x&lt;x_{i+1}\)</span>. As with interpolation, we can take <span class="math notranslate nohighlight">\(f(x)\)</span> in each interval to be a polynomial, including additional terms in the polynomial to increase the accuracy of our approximation.</p>
+<p><strong>Rectangle rule</strong></p>
+<p>The first approximation is to assume that <span class="math notranslate nohighlight">\(f(x)\)</span> is a constant <span class="math notranslate nohighlight">\(f(x)=f_i\)</span> in the interval <span class="math notranslate nohighlight">\(x_i\leq x\leq x_{i+1}\)</span>. The total integral is then</p>
+<div class="math notranslate nohighlight">
+\[I\approx \sum_{i=1}^{N-1} f_i \Delta x.\]</div>
+<p><strong>Trapezoidal rule</strong></p>
+<p>If we make a linear approximation, we can write</p>
+<div class="math notranslate nohighlight">
+\[f(x) \approx f_i + {f_{i+1}-f_i\over \Delta x} \left(x-x_i\right)\hspace{1cm} x_i\leq x\leq x_{i+1}.\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\int_{x_i}^{x_{i+1}} f(x) dx =  \int_0^{\Delta x} f(x_i+y) dy \approx f_i \Delta x + (f_{i+1}-f_i){\Delta x\over 2}  = {f_i+f_{i+1}\over 2}\Delta x.\]</div>
+<p>This is known as the <em>trapezoidal rule</em> because it corresponds to the area of the trapezoid formed by connecting the points <span class="math notranslate nohighlight">\((x_i,f_i)\)</span> and <span class="math notranslate nohighlight">\((x_{i+1}, f_{i+1})\)</span> by a straight line.</p>
+<p>When we sum over all intervals, each point gets counted twice except for the left and right boundaries, so</p>
+<div class="math notranslate nohighlight">
+\[I \approx \Delta x \left[{f_1\over 2} + f_2 + f_3 \dots + f_{N-1} + {f_N\over 2}\right].\]</div>
+<p><strong>Simpson’s rule</strong></p>
+<p>For the next order, we consider the double interval <span class="math notranslate nohighlight">\(x_{i-1}&lt;x&lt;x_{i+1}\)</span>, and write</p>
+<div class="math notranslate nohighlight">
+\[f(x) \approx f_i + (x-x_i) \left.{df\over dx}\right|_{x_i}+ {(x-x_i)^2\over 2}\left.{d^2f\over dx^2}\right|_{x_i}.\]</div>
+<p>The reason for considering the double interval from <span class="math notranslate nohighlight">\(x_{i-1}\)</span> to <span class="math notranslate nohighlight">\(x_{i+1}\)</span> is that the linear term is odd in this interval (antisymmetric about <span class="math notranslate nohighlight">\(x_i\)</span>) and so does not contribute to the integral, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\int_{x_{i-1}}^{x_{i+1}} f(x) dx \approx 2 f_i \Delta x + {1\over 2} \left.{d^2f\over dx^2}\right|_{x_i} {2(\Delta x)^3\over 3}.\]</div>
+<p>Taking</p>
+<div class="math notranslate nohighlight">
+\[\left.{d^2f\over dx^2}\right|_{x_i} \approx {f_{i+1}-2f_i + f_{i-1}\over (\Delta x)^2}\]</div>
+<p>and simplifying then gives</p>
+<div class="math notranslate nohighlight">
+\[\int_{x_{i-1}}^{x_{i+1}} f(x) dx \approx {\Delta x\over 3} \left[f_{i-1} + 4f_i + f_{i+1} \right].\]</div>
+<p>Adding up the contributions from each double interval, the total integral is</p>
+<div class="math notranslate nohighlight">
+\[I \approx {\Delta x\over 3}\left[ f_1 + 4f_2 + 2f_3 + 4f_4 + 2f_5 \dots 4f_{N-1} + f_N \right],\]</div>
+<p>where we need the total number of points <span class="math notranslate nohighlight">\(N\)</span> to be an odd number (so we can divide the domain into a set of double intervals).</p>
+<div class="admonition-exercise-newton-cotes admonition">
+<p class="admonition-title">Exercise: Newton-Cotes</p>
+<p>Implement these three methods to calculate the integral</p>
+<div class="math notranslate nohighlight">
+\[\int_0^{\pi/2} \cos x \, dx = 1.\]</div>
+<p>How does the error in each method scale with the number of points <span class="math notranslate nohighlight">\(N\)</span>? Is it what you expected?</p>
+<p>Next, use your code to check the result that the average value of <span class="math notranslate nohighlight">\(\sin^2(x)\)</span> is <span class="math notranslate nohighlight">\(1/2\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[{1\over \pi} \int_{0}^{\pi} \sin^2(x) dx = {1\over 2}.\]</div>
+<p>Does the result surprise you? What happened?</p>
+</div>
+<div class="admonition-follow-up-exercise admonition">
+<p class="admonition-title">Follow up exercise:</p>
+<p>What kind of functions are integrated exactly (to machine precision) for each method? (Hint: polynomials of a certain order, which order?)</p>
+</div>
+</section>
+<section id="gaussian-quadrature">
+<h2>Gaussian quadrature<a class="headerlink" href="#gaussian-quadrature" title="Permalink to this heading">#</a></h2>
+<p>In the previous examples, we were given the function <span class="math notranslate nohighlight">\(f(x)\)</span> evaluated at a pre-determined set of points <span class="math notranslate nohighlight">\(\{ x_i\}\)</span>. But if instead we are able to choose the values of <span class="math notranslate nohighlight">\(x\)</span> where we can evaluate the function, we can do better using the method of <em>Gaussian quadratures</em>.</p>
+<p>The simplest example is the integral</p>
+<div class="math notranslate nohighlight">
+\[\int^{1}_{-1} f(x) dx\]</div>
+<p>(which is quite general because for different integration limits you can make a change of variables to bring the limits to <span class="math notranslate nohighlight">\(-1\)</span> and <span class="math notranslate nohighlight">\(+1\)</span>). We write the integral as</p>
+<div class="math notranslate nohighlight">
+\[\int^{1}_{-1} f(x) dx = \sum_{i=1}^N w_i f(x_i).\]</div>
+<p>For a suitable choice of the weights <span class="math notranslate nohighlight">\(w_i\)</span> and the locations <span class="math notranslate nohighlight">\(x_i\)</span> it can be shown that this expression is exact when <span class="math notranslate nohighlight">\(f(x)\)</span> is a polynomial of order <span class="math notranslate nohighlight">\(2N-1\)</span> or less.</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>This means that with 2 evaluations of <span class="math notranslate nohighlight">\(f(x)\)</span> we can exactly evaluate the integral of a cubic polynomial! How does this compare with Simpson’s method?</p>
+</div>
+<p>The proof that this works and the calculation of the values of <span class="math notranslate nohighlight">\(w_i\)</span> and <span class="math notranslate nohighlight">\(x_i\)</span> is quite involved. [It uses the theory of orthogonal polynomials, so for example for this particular form of the integral, the values of <span class="math notranslate nohighlight">\(x_i\)</span> are the roots of the Legendre Polynomial <span class="math notranslate nohighlight">\(P_N(x)\)</span>.] However, we can look up <span class="math notranslate nohighlight">\(w_i\)</span> and <span class="math notranslate nohighlight">\(x_i\)</span> using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.legendre.leggauss.html"><code class="docutils literal notranslate"><span class="pre">numpy.polynomial.legendre.leggauss</span></code></a></p>
+<p>For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">polynomial</span><span class="o">.</span><span class="n">legendre</span><span class="o">.</span><span class="n">leggauss</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">(array([-0.57735027,  0.57735027]), array([1., 1.]))</span>
+</pre></div>
+</div>
+<p>gives the <span class="math notranslate nohighlight">\(N=2\)</span> values. In this case, the weights are both 1, and the <span class="math notranslate nohighlight">\(x\)</span> values are <span class="math notranslate nohighlight">\(\pm 1/\sqrt{3}\)</span>.</p>
+<div class="admonition-exercise-gaussian-quadrature admonition">
+<p class="admonition-title">Exercise: Gaussian quadrature</p>
+<p>Using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.legendre.leggauss.html"><code class="docutils literal notranslate"><span class="pre">numpy.polynomial.legendre.leggauss</span></code></a>
+to get the locations and weights for different choices of <span class="math notranslate nohighlight">\(N\)</span>, implement Gaussian quadratures.</p>
+<p>Check that the answer is indeed exact for polynomials of degree <span class="math notranslate nohighlight">\(2N-1\)</span> or less. What happens for higher order polynomials?</p>
+<p>Try a function that is not a simple polynomial, e.g. <span class="math notranslate nohighlight">\(e^{-x^2}\)</span>. What is the error in the approximation and how does it scale with <span class="math notranslate nohighlight">\(N\)</span>?</p>
+<p>Hints:</p>
+<ul class="simple">
+<li><p>to get the correct value of the integral to compare with to see how accurate your approximation is, you could use the general purpose integrator <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html"><code class="docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code></a></p></li>
+<li><p>to generate a polynomial with degree <code class="docutils literal notranslate"><span class="pre">N</span></code> and random coefficients between -10 and +10 (for example) you can use
+<code class="docutils literal notranslate"><span class="pre">np.polynomial.Polynomial(np.random.randint(-10,high=10,size=N+1))</span></code></p></li>
+</ul>
+</div>
+<p>Gaussian quadratures can be applied more generally to integrals of the form</p>
+<div class="math notranslate nohighlight">
+\[\int W(x) f(x) dx\]</div>
+<p>for some weight function <span class="math notranslate nohighlight">\(W(x)\)</span> (in the previous example we had <span class="math notranslate nohighlight">\(W(x)=1\)</span>). We write the integral as a sum</p>
+<div class="math notranslate nohighlight">
+\[\int W(x) f(x) dx= \sum_{i=1}^N w_i f(x_i)\]</div>
+<p>and find the choices of <span class="math notranslate nohighlight">\(w_i\)</span> and <span class="math notranslate nohighlight">\(x_i\)</span> that make the sum exact for a polynomial of degree <span class="math notranslate nohighlight">\(2N-1\)</span> or less.</p>
+<p>One example is <span class="math notranslate nohighlight">\(W(x)=e^{-x^2}\)</span>, ie. integrals</p>
+<div class="math notranslate nohighlight">
+\[\int_0^\infty e^{-x^2} f(x) dx.\]</div>
+<p>In this case, the weights and locations are given by <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.hermite.hermgauss.html"><code class="docutils literal notranslate"><span class="pre">numpy.polynomial.hermite.hermgauss</span></code></a>. [The locations <span class="math notranslate nohighlight">\(x_i\)</span> are the roots of the <span class="math notranslate nohighlight">\(N\)</span>th Hermite polynomial, which are the polynomials that are orthogonal under an inner product defined with weight function <span class="math notranslate nohighlight">\(W(x)\)</span>.]</p>
+<div class="admonition-exercise-gauss-hermite admonition">
+<p class="admonition-title">Exercise: Gauss-Hermite</p>
+<p>Modify your code to use the Gauss-Hermite coefficients and check that you can get an exact answer for the integral of <span class="math notranslate nohighlight">\(e^{-x^2}\)</span>.</p>
+<p>Hint: If you want to use <code class="docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code> again to get the value of the integral as a comparison, note that you can give it limits of <span class="math notranslate nohighlight">\(-\infty\)</span> to <span class="math notranslate nohighlight">\(+\infty\)</span> using <code class="docutils literal notranslate"><span class="pre">-np.inf</span></code> and <code class="docutils literal notranslate"><span class="pre">np.inf</span></code>.</p>
+</div>
+<p>Other examples are</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(W(x)=e^{-x}\)</span> with integration limits <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(\infty\)</span>. In this case, we need Gauss-Laguerre integration – see <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.laguerre.laggauss.html"><code class="docutils literal notranslate"><span class="pre">numpy.polynomial.laguerre.laggauss</span></code></a></p></li>
+<li><p><span class="math notranslate nohighlight">\(W(x)=1/\sqrt{1-x^2}\)</span> from <span class="math notranslate nohighlight">\(x=-1\)</span> to <span class="math notranslate nohighlight">\(1\)</span> is Gauss-Chebyshev quadrature – see
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.chebgauss.html"><code class="docutils literal notranslate"><span class="pre">numpy.polynomial.chebyshev.chebgauss</span></code></a></p></li>
+</ul>
+</section>
+<section id="integration-challenge">
+<h2>Integration challenge<a class="headerlink" href="#integration-challenge" title="Permalink to this heading">#</a></h2>
+<div class="admonition-exercise-average-velocity-of-the-maxwell-boltzmann-distribution admonition">
+<p class="admonition-title">Exercise: Average velocity of the Maxwell-Boltzmann distribution.</p>
+<p>Use Simpson’s rule, Gaussian quadrature, and the general purpose integrator <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html"><code class="docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code></a> to evaluate the average velocity <span class="math notranslate nohighlight">\(\langle\left|v\right|\rangle\)</span> for the 3D <a class="reference external" href="https://en.wikipedia.org/wiki/Maxwell%E2%80%93Boltzmann_distribution">Maxwell-Boltzmann distribution</a>.</p>
+<p>For each method, check the numerical error comparing to the analytic result. How many points do you need to get to <span class="math notranslate nohighlight">\(0.1\)</span>% accuracy?</p>
+<p>For Simpson’s rule you can use your own implementation from above or you could try <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simpson.html"><code class="docutils literal notranslate"><span class="pre">scipy.integrate.simpson</span></code></a>.</p>
+<p>For Gaussian quadrature, try both Gauss-Hermite and Gauss-Laguerre. Which one is best?</p>
+</div>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Integration methods are covered in Chapter 7 of Gezerlis.</p></li>
+<li><p>Overview of <a class="reference external" href="https://docs.scipy.org/doc/scipy/tutorial/integrate.html">`scipy.integrate’</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/QUADPACK">QUADPACK</a> is the Fortran 77 library that is used by <code class="docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code> under the hood.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="interpolation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Interpolation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="function_solutions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Solutions to exercises</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-cotes-methods">Newton-Cotes methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-quadrature">Gaussian quadrature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-challenge">Integration challenge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, CC BY SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

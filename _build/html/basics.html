@@ -1,0 +1,656 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting set up &#8212; PHYS 512 Computational Physics with Applications</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'basics';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Programming best practices" href="programming.html" />
+    <link rel="prev" title="PHYS 512 Computational Physics with Applications: Winter 2023 Course outline" href="outline.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/plasma.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/plasma.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Course outline</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting set up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming.html">Programming best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="floats.html">Floating point arithmetic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Manipulating functions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="function_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="derivatives_solutions.html">Derivatives exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation_solutions.html">Interpolation exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration_solutions.html">Integration exercises</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Random numbers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="random.html">Random numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcg.html">Linear Congruential Generators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generating_random.html">Probability distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monte_carlo_integration.html">Monte Carlo integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metropolis.html">Metropolis-Hastings algorithm</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="random_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="prob_distributions_solutions.html">Probability distributions Exercise 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prob_distributions_solutions_part2.html">Probability distributions Part 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="montecarlo_solutions.html">Monte Carlo Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metropolis_solutions.html">Metropolis-Hastings</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solving systems of equations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="matrices.html">Matrices in numpy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="linear_least_squares.html">Linear least squares</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polynomial_fit.html">Polynomial fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nonlinear.html">Non-linear least squares</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="solving_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="polynomial_fit_solutions.html">Orthogonal polynomials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear_fit.html">Lorentzian fit</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="mllecture.html">Machine Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="chatgpt.html">ChatGPT ‘Real-Life Example’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mltensorflow.html">Example : Higgs Boson</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hw1.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw2.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw3.html">Homework 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw4.html">Homework 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_instructions.html">Project Instructions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="homework_solutions.html">Homework solutions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="HW1_solutions.html">Homework 1 solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HW2_solutions.html">Homework 2 solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework_notes/hw2_common_issues.html">Homework 2: Common Issues</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2Fbasics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/basics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Getting set up</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-do">To do</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control-and-github">Version control and Github</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-set-up">
+<h1>Getting set up<a class="headerlink" href="#getting-set-up" title="Permalink to this heading">#</a></h1>
+<section id="to-do">
+<h2>To do<a class="headerlink" href="#to-do" title="Permalink to this heading">#</a></h2>
+<p>Here is a summary of what you need to do to get set up for the course:</p>
+<ul class="simple">
+<li><p>Join the <strong>Slack</strong> workspace for the class. You should have received email from Simon via myCourses (check your spam folder!).</p></li>
+<li><p>Fill out the <strong>when2meet poll</strong> that Simon sent in the same email so we can find a time for the <strong>Debug den</strong>.</p></li>
+<li><p>Mkae a <strong>Github account</strong> if you don’t already have one, and make a private repository where you will submit your homework (as a Jupyter notebook for each homework).  If you are making a new account, choose your username carefully, your Github account is a great place to build your computing portfolio, e.g. for future job searches!</p></li>
+<li><p>Make sure you have <strong>Python 3</strong> installed and the <strong>NumPy</strong>, <strong>SciPy</strong>, and <strong>Matplotlib</strong> libraries.</p></li>
+<li><p>We will be doing interactive exercises in class, so you should <strong>bring your laptop to every class</strong>. The classroom likely has limited power outlets available, so please charge your battery before class if needed!</p></li>
+</ul>
+<p><strong>If you need help with installation, setting up a Github repository, or if you have questions about NumPy and Matplotlib basics, let the TAs know, they can help you in the Debug den sessions.</strong></p>
+</section>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h2>
+<p>In this course, we will use <a class="reference external" href="https://docs.python.org/3/">Python 3</a>. This will build on the exposure to Python you have already had in earlier courses. Python has the advantages of a high level language, for example, concise code, rapid prototyping, no compilation step, interactive use, while also having access to efficient numerical libraries that are implemented in C or Fortran under the hood. You may be interested in exploring the use of other languages for numerical computations, but for this course all submitted material must use Python 3.</p>
+<p>We will assume that you have access to</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/">NumPy</a></p></li>
+<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide">SciPy</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/#">Matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://jupyter.org">Jupyter notebook</a></p></li>
+</ul>
+<p>If you are not already set up to run Python, a good way to install it is through <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> which will also install all the libraries you need. You may have Python installed but be missing SciPy for example, in which case you can try <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">scipy</span></code>.</p>
+<p>How you interact with Python is up to you. A really great way to code is in a Jupyter notebook. Homeworks should be submitted as Jupyter notebooks in your Github repository.</p>
+<p>It might be helpful to have a look at some NumPy tutorials to remind you how to create and manipulate arrays etc., and to remind yourself how to make a basic plot in Matplotlib if needed. The above are to the documentation for each library, which have basic introductory tutorials.  Otherwise, there are many tutorials you can find online. One place to look is at <a class="reference external" href="https://zingale.github.io/computational_astrophysics/intro.html">Mike Zingale’s class AST 390: Computational Astrophysics at Stonybrook</a>
+which has a section covering NumPy and Matplotlib.</p>
+<div class="admonition-exploring-numpy admonition">
+<p class="admonition-title">Exploring NumPy</p>
+<p>Just to get you started with NumPy, here are some expressions you can use to begin with:</p>
+<p>Creating arrays</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">np.array([1.0,2.0])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.ones(10)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.zeros(10)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.ones_like(a)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.arange(2.0,10.0,0.1)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.linspace(2.0,10.0,num=100)</span></code></p></li>
+</ul>
+<p>Slicing arrays</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a[1:10]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a[:-1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a[::2]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a[::-1]</span></code></p></li>
+</ul>
+<p>To see what operations are available for an object</p>
+<p><code class="docutils literal notranslate"><span class="pre">dir(a)</span></code></p>
+<p>It is helpful to be aware of when a variable is a reference (pointer) to an array and when an array is copied or not:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">B=A</span></code>   points to same object (<code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">is</span> <span class="pre">B</span></code> will return True)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">B=A[:]</span></code>   shallow copy/view (same memory)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">B=A.copy()</span></code>    deep copy   (<code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">is</span> <span class="pre">B</span></code> will return False)</p></li>
+</ul>
+</div>
+</section>
+<section id="version-control-and-github">
+<h2>Version control and Github<a class="headerlink" href="#version-control-and-github" title="Permalink to this heading">#</a></h2>
+<p>In this course, we will make use of <code class="docutils literal notranslate"><span class="pre">git</span></code> which is a <em>version control</em> system (in particular, you will use this to submit your homework and will work in a collaborative group for your project).  Version control systems let you</p>
+<ul class="simple">
+<li><p>keep track of changes that you make and revert back to previous versions</p></li>
+<li><p>merge contributions from others (and deal with conflicts) and make contributions yourself to other projects</p></li>
+<li><p>see who contributed what code and when it was added</p></li>
+<li><p>work on updates to the code in separate “branches”</p></li>
+<li><p>if your central repository is based on Github, it provides a backup</p></li>
+</ul>
+<p>You should become familiar with the basic git operations</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-am</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file</p></li>
+</ul>
+<p>A place to get started is</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://herewecode.io/blog/create-repository-github/">Step-by-step: How to Start with Git and Create a Repository in GitHub</a></p></li>
+</ul>
+<p>which is a concise description of creating a repository on github and then cloning it to a local directory.</p>
+<p>You can also look at the section on Github in <a class="reference external" href="https://zingale.github.io/computational_astrophysics/git/version-control.html">Mike Zingale’s class AST 390: Computational Astrophysics at Stonybrook</a> and the tutorials on Github, <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/">Github quickstart</a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="outline.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">PHYS 512 Computational Physics with Applications: Winter 2023 Course outline</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="programming.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Programming best practices</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-do">To do</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control-and-github">Version control and Github</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, CC BY SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

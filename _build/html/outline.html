@@ -1,0 +1,675 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>PHYS 512 Computational Physics with Applications: Winter 2023 Course outline &#8212; PHYS 512 Computational Physics with Applications</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'outline';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting set up" href="basics.html" />
+    <link rel="prev" title="PHYS 512 Computational Physics with Applications" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/plasma.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/plasma.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Course outline</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Getting set up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming.html">Programming best practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="floats.html">Floating point arithmetic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Manipulating functions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="derivatives.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpolation.html">Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">Integration</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="function_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="derivatives_solutions.html">Derivatives exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interpolation_solutions.html">Interpolation exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration_solutions.html">Integration exercises</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Random numbers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="random.html">Random numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcg.html">Linear Congruential Generators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generating_random.html">Probability distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monte_carlo_integration.html">Monte Carlo integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metropolis.html">Metropolis-Hastings algorithm</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="random_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="prob_distributions_solutions.html">Probability distributions Exercise 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prob_distributions_solutions_part2.html">Probability distributions Part 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="montecarlo_solutions.html">Monte Carlo Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metropolis_solutions.html">Metropolis-Hastings</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solving systems of equations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="matrices.html">Matrices in numpy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="linear_least_squares.html">Linear least squares</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polynomial_fit.html">Polynomial fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nonlinear.html">Non-linear least squares</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="solving_solutions.html">Solutions to exercises</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="polynomial_fit_solutions.html">Orthogonal polynomials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear_fit.html">Lorentzian fit</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Machine Learning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="mllecture.html">Machine Learning</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="chatgpt.html">ChatGPT ‘Real-Life Example’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mltensorflow.html">Example : Higgs Boson</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hw1.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw2.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw3.html">Homework 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw4.html">Homework 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_instructions.html">Project Instructions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="homework_solutions.html">Homework solutions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="HW1_solutions.html">Homework 1 solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HW2_solutions.html">Homework 2 solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework_notes/hw2_common_issues.html">Homework 2: Common Issues</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys512" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys512/issues/new?title=Issue%20on%20page%20%2Foutline.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/outline.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>PHYS 512 Computational Physics with Applications: Winter 2023 Course outline</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-and-goals">Description and goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructor-and-tas">Instructor and TAs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-and-place">Time and place</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-topics">List of topics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-books-and-other-resources">Useful books and other resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment-and-course-format">Assessment and Course Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mcgill-policy-statements">McGill policy statements</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="phys-512-computational-physics-with-applications-winter-2023-course-outline">
+<h1>PHYS 512 Computational Physics with Applications: Winter 2023 Course outline<a class="headerlink" href="#phys-512-computational-physics-with-applications-winter-2023-course-outline" title="Permalink to this heading">#</a></h1>
+<section id="description-and-goals">
+<h2>Description and goals<a class="headerlink" href="#description-and-goals" title="Permalink to this heading">#</a></h2>
+<p>A course in computational methods in physics. Computing is important in all aspects of modern physics, whether it be solving non-linear equations for a theoretical calculation or analyzing and modelling data sets in an experiment. By taking this course, you will</p>
+<ul class="simple">
+<li><p>become familiar with a range of computational techniques that can be applied to physics problems, and know how to get started on tackling a problem numerically.</p></li>
+<li><p>understand the essential ideas underlying standard computational methods, and become familiar with their implementation in Python, in particular in the NumPy and SciPy libraries.</p></li>
+<li><p>gain experience in solving a range of different physics problems numerically.</p></li>
+</ul>
+<p>There are no prerequisites, but some previous experience in Python writing basic programs and plotting data etc. is recommended (for example, as seen in Physics lab courses at McGill).</p>
+</section>
+<section id="instructor-and-tas">
+<h2>Instructor and TAs<a class="headerlink" href="#instructor-and-tas" title="Permalink to this heading">#</a></h2>
+<p>Prof. <a class="reference external" href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>, <a class="reference external" href="mailto:andrew&#46;cumming&#37;&#52;&#48;mcgill&#46;ca">andrew<span>&#46;</span>cumming<span>&#64;</span>mcgill<span>&#46;</span>ca</a>, Rutherford 310.</p>
+<p>The TAs are Valentin Boettcher, Simon Guichandut, and Matthew Lundy.</p>
+</section>
+<section id="time-and-place">
+<h2>Time and place<a class="headerlink" href="#time-and-place" title="Permalink to this heading">#</a></h2>
+<p>Class will be held on Tuesdays and Thursdays from 1-2.30pm in Rutherford 115.</p>
+<p>The first class is Thursday August 31st and the final class is on Tuesday Dec 5th. There is no class on Tuesday October 10 (Reading break) or Thursday November 30 (makeup day with a Monday schedule).</p>
+<p>The <strong>debug den</strong> will be held on Mondays between 10am and noon in the Piano room (Rutherford 211). This will be an informal session where you can ask the TAs questions and work together on class exercises and homeworks.</p>
+</section>
+<section id="list-of-topics">
+<h2>List of topics<a class="headerlink" href="#list-of-topics" title="Permalink to this heading">#</a></h2>
+<p>A preliminary list of topics is given below [The ordering of topics may change, and we may not cover all of the subtopics, depending on time available.]</p>
+<ul class="simple">
+<li><p><em>Computing basics.</em> Getting set up. NumPy and SciPy libraries. Github. Matplotlib. Programming best practices. Floating point arithmetic, roundoff error. Speed of computation.</p></li>
+<li><p><em>Differentiation, integration, and interpolations of functions.</em> Finite differences, optimal choice of interval, automatic differentiation. Polynomial interpolation and splines. Integration: Simpson’s rule, Gaussian quadrature, singularities and indefinite integrals.</p></li>
+<li><p><em>Random variables.</em> Generating random numbers. Transformation and rejection methods. Monte Carlo integration. MCMC and Metropolis-Hastings.</p></li>
+<li><p><em>Matrices and solving linear equations.</em> Linear systems of equations and eigenvalue problems. Least squares fitting. Condition number. Gaussian elimination, LU decomposition, SVD, QR decomposition, conjugate gradient for sparse matrices.</p></li>
+<li><p><em>Solving non-linear equations.</em> Non-linear least squares. Root finding and Newton’s method. Levenberg-Marquardt. MCMC.</p></li>
+<li><p><em>Fourier transforms and spectral analysis.</em> Discrete FT and FFT, convolution theorem, aliasing and Nyquist theorem. Image processing. Matched filters.</p></li>
+<li><p><em>Ordinary differential equations.</em> Initial value and boundary value problems. Runge Kutta methods for ODEs. Stiff equations and implicit methods. Shooting and relaxation methods for boundary value problems. Symplectic integrators.</p></li>
+<li><p><em>Partial differential equations.</em> Examples of PDEs: Poisson’s equation by FFT, wave equation, advection and fluid flow. Finite difference and finite volume, stability, numerical dissipation, Lax method, implicit and flux-conservative schemes.</p></li>
+<li><p><em>A brief introduction to machine learning.</em> Example application to high energy physics data.</p></li>
+<li><p><em>Performance considerations</em>. What factors influence performance. Options for compiled Python and linking to C and Fortran.</p></li>
+</ul>
+<p>These topics will be illustrated with a range of different physics applications, such as simulating the propagation of electromagnetic waves in plasmas, numerical solutions of the Schrodinger equation, thermal instabilities and non-linear oscillators, fitting gravitational wave data, and other examples.</p>
+</section>
+<section id="useful-books-and-other-resources">
+<h2>Useful books and other resources<a class="headerlink" href="#useful-books-and-other-resources" title="Permalink to this heading">#</a></h2>
+<p>There is no required textbook for the course, but an excellent Python-based book available through the McGill library is</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mcgill.on.worldcat.org/search/detail/1162187759?queryString=ti%3A%28numerical%20methods%20physics%29&amp;databaseList=283%2C638&amp;origPageViewName=pages%2Fadvanced-search-page&amp;clusterResults=&amp;groupVariantRecords=&amp;expandSearch=true&amp;translateSearch=false&amp;queryTranslationLanguage=&amp;lang=en&amp;scope=wz%3A12129">Numerical Methods in Physics with Python</a> by Alex Gezerlis (the link is to the McGill library ebook)</p></li>
+</ul>
+<p>Other books you could look at are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www-personal.umich.edu/~mejn/cp/">Computational Physics</a> by Mark Newman. Also an excellent Python-based book. It is only available in paper format from the library, but I’ve linked to the book website which has some sample chapters that you can look at.</p></li>
+<li><p><a class="reference external" href="https://mcgill.on.worldcat.org/search/detail/63814390?queryString=tao%20pang%20computational&amp;expandSearch=true&amp;translateSearch=false&amp;databaseList=283%2C638&amp;clusterResults=true&amp;groupVariantRecords=false">An Introduction to Computational Physics</a> by Tao Pang (the link is to the McGill library ebook). Excellent coverage of the topics in this course, with code samples in Fortran/Java.</p></li>
+<li><p><a class="reference external" href="https://www.physics.purdue.edu/~hisao/book/">Computational Physics</a> by Giordano and Nakanishi. An interesting book that is organized by physics topic rather than numerical method.</p></li>
+<li><p><a class="reference external" href="http://numerical.recipes/book.html">Numerical Recipes: The Art of Scientific Computing</a> by Press, Teukolsky, Vetterling and Flannery. The classic book on numerical methods with really good explanations. The downside is that the C/Fortran code comes with a very restrictive license. Available to read online (although with annoying popups unless you purchase a license).</p></li>
+<li><p><a class="reference external" href="https://mcgill.on.worldcat.org/search/detail/569384322?queryString=au%3A%28klein%20godunov%29&amp;databaseList=283%2C638&amp;origPageViewName=pages%2Fadvanced-search-page&amp;clusterResults=&amp;groupVariantRecords=&amp;expandSearch=true&amp;translateSearch=false&amp;queryTranslationLanguage=&amp;lang=en&amp;scope=wz%3A12129">Introductory Computational Physics</a> by Klein and Godunov has a nice concise treatment of different topics.</p></li>
+</ul>
+<p>Course materials for previous versions of this course by Jon Sievers are available on github: <a class="reference external" href="https://github.com/sievers/phys512-2020">2020</a>, <a class="reference external" href="https://github.com/sievers/phys512-2021">2021</a>, and <a class="reference external" href="https://github.com/sievers/phys512-2022">2022</a>.</p>
+<p>There are also other courses on computational physics that have materials online:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://zingale.github.io/computational_astrophysics/intro.html">Mike Zingale’s class AST 390: Computational Astrophysics at Stonybrook</a></p></li>
+<li><p><a class="reference external" href="https://computation.physics.utoronto.ca">Computational Physics tutorials at the University of Toronto</a></p></li>
+<li><p><a class="reference external" href="https://github.com/PHY407-UofT">Course materials for PHY407 at UofT</a></p></li>
+</ul>
+</section>
+<section id="assessment-and-course-format">
+<h2>Assessment and Course Format<a class="headerlink" href="#assessment-and-course-format" title="Permalink to this heading">#</a></h2>
+<p>This will be an interactive class, with a mixture of lecture and problem solving during class time. <em>There will be coding exercises in class – you should bring your laptop to class with you.</em></p>
+<p>There will also be a weekly “<em>Debug den</em>”, which will be an informal hackspace where you can work together and get help from the TAs. If there are topics you would like covered in a tutorial in these sessions, you can let the TAs know.</p>
+<p>Your grade will be based on</p>
+<ul class="simple">
+<li><p>Homeworks (30%), given out every 1-2 weeks during the term. The lowest homework score will be dropped when calculating the final grade. Note that you can discuss homework questions with other students in the course, but you should write your own homework solutions and any code you hand in should be your own.</p></li>
+<li><p>Project (30%). In teams of 2-3 students, the project component will involve developing a code to investigate a physics problem of interest to the student. The topic must be decided on and approved by the instructor by early October, and the project will be due at the end of term. For more information and suggestions for topics, see the <a class="reference external" href="https://andrewcumming.github.io/phys512/project_instructions.html">Project instructions</a>.</p></li>
+<li><p>Take-home final exam (40%). A mixture of analytic and computational problems. The take-home exam will be available for a 72 hour period and designed to be completed in 3 hours.</p></li>
+</ul>
+<p>We will use the following distribution and communication tools:</p>
+<ul class="simple">
+<li><p>Lecture notes and assignments will be made available through this website</p></li>
+<li><p>Homework and project submissions will be through each students private Github repository</p></li>
+<li><p>Grades will be distributed in myCourses</p></li>
+<li><p>A Slack workspace is available for the class for students to collaborate on projects and to ask questions or discuss the homework. Note that discussions and questions about homework <strong>must</strong> be posted to the <code class="docutils literal notranslate"><span class="pre">#homework</span></code> channel (we will make a tool available to post questions anonymously if you prefer to do that). <em>Note that the TAs will not answer questions about homework via direct message in Slack, you must use the homework channel.</em></p></li>
+</ul>
+<p>The homework will be graded according to the following rubric:</p>
+<ol class="arabic simple" start="0">
+<li><p>No meaningful attempt made at a solution (no code, unrelated code, non-functional code whose function is hard to determine).</p></li>
+<li><p>Part of an answer provided / a plan or idea for a solution is discernible. Partly functional code that can be understood and forms the beginnings of a solution.</p></li>
+<li><p>An understanding of the problem and a concrete idea for an answer / code implementation is present. Code is almost functional and understandable, but does not fully solve the problem. Alternatively, there is a complete working code but the code is hard to understand (poor style or commenting).</p></li>
+<li><p>Demonstrates a clear understanding of the problem and its solution. Working <em>clear</em> code, or non-working code with a clear explanation of what the problem with it may be.</p></li>
+</ol>
+</section>
+<section id="mcgill-policy-statements">
+<h2>McGill policy statements<a class="headerlink" href="#mcgill-policy-statements" title="Permalink to this heading">#</a></h2>
+<p>McGill University values academic integrity. Therefore all students must understand the meaning and consequences of cheating, plagiarism and other academic oﬀences under the <a class="reference external" href="https://www.mcgill.ca/secretariat/files/secretariat/code_of_student_conduct_and_disciplinary_procedures.pdf">Code of Student Conduct and Disciplinary Procedures</a> (approved by Senate on 29 January 2003) (See McGill’s guide to academic honesty](<a class="reference external" href="https://www.mcgill.ca/students/srr/honest">https://www.mcgill.ca/students/srr/honest</a>) for more information).</p>
+<p>In accord with McGill University’s <a class="reference external" href="https://www.mcgill.ca/secretariat/files/secretariat/charter_of_student_rights_last_approved_october_262017.pdf">Charter of Students’ Rights</a>, students in this course have the right to submit in English or in French written work that is to be graded. This does not apply to courses in which acquiring proficiency in a language is one of the objectives.</p>
+<p>In the event of extraordinary circumstances beyond the University’s control, the content and/or evaluation scheme in this course is subject to change.</p>
+<p>Additional policies governing academic issues which aﬀect students can be found in the <a class="reference external" href="https://www.mcgill.ca/secretariat/files/secretariat/charter_of_student_rights_last_approved_october_262017.pdf">McGill Charter of Students’ Rights</a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">PHYS 512 Computational Physics with Applications</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="basics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Getting set up</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-and-goals">Description and goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructor-and-tas">Instructor and TAs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-and-place">Time and place</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-topics">List of topics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-books-and-other-resources">Useful books and other resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment-and-course-format">Assessment and Course Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mcgill-policy-statements">McGill policy statements</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, CC BY SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
